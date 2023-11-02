@@ -1,0 +1,25 @@
+body{
+    background-color: red;
+}
+
+nav{
+    background-color: black;
+    height:50px;
+    width:100%;
+    margin:0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+}
+
+a{
+    margin:10px;
+    padding:10px;
+    font-size:medium;
+}
+a:hover{
+    background-color: darkblue;
+    border-top:3px solid blanchedalmond;
+    border-bottom:3px solid blanchedalmond;
+}
