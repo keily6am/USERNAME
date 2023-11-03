@@ -1,10 +1,10 @@
 body{
-    background-color: rgb(182, 160, 160);
+    background-color:#aaae8eff;
 }
 .logo{
     width:100px;
     height:90px;
-    border:2px solid wheat;
+    border:2px solid rgb(159, 142, 111);
     background-image:url("rafamonkey.jpg");
     background-repeat: no-repeat;
     background-size:cover;
@@ -14,7 +14,7 @@ img{
     width:100%;
 }
 nav{
-    background-color: rgb(182, 160, 160);
+    background-color: rgb(159, 142, 111);
     height:100px;
     width:100%;
     margin:0 auto;
@@ -30,7 +30,7 @@ a{
     font-size:x-large;
 }
 a:hover{
-    background-color: rgb(182, 160, 160);
-    border-top:3px solid blanchedalmond;
-    border-bottom:3px solid blanchedalmond;
+    background-color: rgb(100, 70, 70);
+    border-top:3px solid rgb(90, 64, 26);
+    border-bottom:3px solid rgb(90, 64, 26);
 }
