@@ -9,6 +9,13 @@ body{
     background-repeat: no-repeat;
     background-size:cover;
 }
+.me{
+    background-image:url("bippy.jpg");
+    width:100px;
+    height:90px;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
 img{
     height:90%;
     width:100%;
