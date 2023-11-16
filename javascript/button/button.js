@@ -7,9 +7,10 @@ btn.addEventListener("click",button_clicked);
 
 function button_clicked()
 {
-    if(h1_text.textContent == "Hello");
+    if(h1_text.textContent == "Hello")
     {
         h1_text.textContent = "Bye";
+        h1_text.style.color = "blue";
     } else{
         h1_text.textContent = "Hello";
     }
