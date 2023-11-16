@@ -7,9 +7,9 @@ body{
 button{
     background-color: red;
 }
-button2{
+#greenbut{
     background-color: green;
 }
-button3{
+#bluebut{
     background-color: blue;
 }
