@@ -11,7 +11,7 @@ function btn_clicked()
 {
     if(h1_text.textContent == "Hello")
     {
-        h1_text.textContent = "Bye";
+        h1_text.textContent = "Byee";
         h1_text.style.color = "red";
     } else{
         h1_text.textContent = "Hello";
@@ -23,7 +23,7 @@ function button_clicked()
 {
     if(h1_text.textContent == "Hello")
     {
-        h1_text.textContent = "Bye";
+        h1_text.textContent = "Byeee";
         h1_text.style.color = "green";
     } else{
         h1_text.textContent = "Hello";
