@@ -17,4 +17,4 @@ let fname= "Keily";
 for(let i=0;i<fname.length; i++)
 {
     alert(fname[i].toUpperCase());
-}
+} 
