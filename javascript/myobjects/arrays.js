@@ -13,6 +13,9 @@ console.log(arr1);
 //arr1.splice(2,2);
 
 // add something to front of the list
-arr1.unshift(6);
+//arr1.unshift(6);
+
+// add something to the middle 
+arr1.splice(2,0,6);
 
 console.log(arr1);
