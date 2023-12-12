@@ -5,6 +5,7 @@ c = 43;
 class Teacher{
     constructor(fname,lname,age)
     {
+        // this.property1 = parameter1 
         this.fname = fname;
         this.lname = lname;
         this.age = age;
@@ -27,20 +28,30 @@ class Teacher{
         return this.age;
     }
 
-    happy_birthday()
-    {
-        this.age = this.age + 1;
-    }
+   // happy_birthday()
+    //{
+        //this.age = this.age + 1;
+    //}
 }
 
 let teacher1 = new Teacher(a,b,c);
-teacher1.print_all();
-
 let teacher2 = new Teacher("Jason", "Larson",50);
-teacher2.print_all();
 
-teacher2.set_age(55);
-teacher2.print_all();
+const TeacherList = [];
 
-teacher2.happy_birthday();
-teacher2.print_all();
+TeacherList.push(teacher1);
+TeacherList.push(teacher2);
+
+for(let i =0; i<TeacherList.length; i++)
+{
+    TeacherList[i].print_all();
+}
+//teacher1.print_all();
+
+//teacher2.print_all();
+
+//teacher2.set_age(55);
+//teacher2.print_all();
+
+//teacher2.happy_birthday();
+//teacher2.print_all();
