@@ -30,3 +30,6 @@ class Rectangle
         ctx.fillRect(this.xpos, this.ypos, this.width, this.height );
     }
 }
+
+//create a rectangle with the given info.
+rect1= new Rectangle(0,0, 100, 100, "red");
