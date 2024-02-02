@@ -3,7 +3,7 @@ let WIDTH = 800;
 let HEIGHT = 600; 
 
 // get access to canvas element
-let canvas = document.getElementById("canvas");
+let cvs = document.getElementById("canvas");
 cvs.width = WIDTH; 
 cvs.height = HEIGHT;
 // capital words means it won't change anymore; written once and will not change the whole game
