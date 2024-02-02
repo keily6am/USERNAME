@@ -12,3 +12,21 @@ canvas.height = HEIGHT;
 // ctx is what we will call when we want to draw to canvas 
 let ctx = canvas.getContext("2d");
 
+class Rectangle
+{
+    constructor(xpos,ypos,width,height,color)
+    {
+        this.xpos = xpos;
+        this.ypos = ypos;
+        this.width = width;
+        this.height = height;
+        this.color = color;
+    
+    }
+
+    draw(ctx)
+    {
+        ctx.fillstyle = this.color; 
+        ctx.fillRect(this.xpos, this.ypos, this.width, this.height );
+    }
+}
