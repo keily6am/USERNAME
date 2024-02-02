@@ -4,13 +4,13 @@ let HEIGHT = 600;
 
 // get access to canvas element
 let canvas = document.getElementById("canvas");
-canvas.width = WIDTH; 
-canvas.height = HEIGHT;
+cvs.width = WIDTH; 
+cvs.height = HEIGHT;
 // capital words means it won't change anymore; written once and will not change the whole game
 //canvas.style.background = "blue"; 
 
 // ctx is what we will call when we want to draw to canvas 
-let ctx = canvas.getContext("2d");
+let ctx = cvs.getContext("2d");
 
 class Rectangle
 {
@@ -34,3 +34,5 @@ class Rectangle
 //create a rectangle with the given info.
 rect1= new Rectangle(0,0, 100, 100, "red");
 rect1.draw(ctx); // pass in the context 
+rect2 = new Rectangle( 200, 200, 50, 10, "white");
+rect2.draw(ctx); 
