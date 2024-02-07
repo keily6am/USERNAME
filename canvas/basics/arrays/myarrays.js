@@ -37,3 +37,7 @@ class Circle_Outline
 
     }
 }
+
+
+letcircle1 = new Circle_Outline(WIDTH/2, HEIGHT/2, 50, 5, "blue", "Hello World!");
+circle1.draw(ctx);
