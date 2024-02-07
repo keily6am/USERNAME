@@ -60,3 +60,8 @@ for(let i=0; i<n; i++)
     array_circles.push(circle);
 
 }
+
+for(let i=0; i<array_circles.length; i++) //length= how many times we'll do those functions
+{
+    array_circles[i].draw(ctx); 
+}
