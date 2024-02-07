@@ -40,5 +40,23 @@ class Circle_Outline
 }
 
 
+/*
 letcircle1 = new Circle_Outline(WIDTH/2, HEIGHT/2, 50, 5, "blue", "Hello World!");
 circle1.draw(ctx);
+*/
+
+const array_circles = [];
+let n = 5;
+
+for(let i=0; i<n; i++)
+{
+    let rand_x = Math.random()*WIDTH;
+    let rand_y = Math.random()*HEIGHT;
+    //console.log(rand_x);
+    let circle = new Circle_Outline(rand_x,rand_y,50,5,"black",i);
+    //choosing a random x and y 
+    //creating a new circle ; starting off at zero 
+    //everytime u go thru loop u get a new circle and push thru the array, each circle will have different starting points.
+    array_circles.push(circle);
+
+}
