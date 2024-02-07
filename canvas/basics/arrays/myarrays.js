@@ -28,8 +28,9 @@ class Circle_Outline
         ctx.font = "12px Arial";
         ctx.textAlign = "center"; 
         ctx.textBaseline = "middle"; 
+        ctx.fillStyle = this.color;
         ctx.fillText = (this.text,this.x,this.y);
-        // could make a scoreboard out of this
+        
         ctx.beginPath();
         ctx.arc(this.x,this.y,this.raidus, 0,2*Math.PI, false);
         ctx.stoke();
