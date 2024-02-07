@@ -10,11 +10,11 @@ let ctx = cvs.getContext("2d");
 
 class Circle_Outline
 {
-    constructor(x,y,raidus,width,color,text)
+    constructor(x,y,radius,width,color,text)
     {
         this.x = x;
         this.y = y;
-        this.raidus = raidus;
+        this.radius = radius;
         this.width = width;
         this.color = color;
         this.text = text; 
@@ -32,8 +32,8 @@ class Circle_Outline
         ctx.fillText = (this.text,this.x,this.y);
         
         ctx.beginPath();
-        ctx.arc(this.x,this.y,this.raidus, 0,2*Math.PI, false);
-        ctx.stoke();
+        ctx.arc(this.x,this.y,this.radius, 0,2*Math.PI,false);
+        ctx.stroke();
         ctx.closePath();
 
     }
