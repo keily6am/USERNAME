@@ -33,11 +33,11 @@ class Rectangle
 
 class Circle
 {
-    constructor(xpos,ypos,raidus, color)
+    constructor(xpos,ypos,radius, color)
     {
         this.xpos = xpos;
         this.ypos = ypos;
-        this.raidus = raidus;
+        this.radius = radius;
         this.color = color;
     }
 
@@ -45,7 +45,7 @@ class Circle
     {
         ctx.fillstyle = this.color;
         ctx.beginPath();
-        ctx.arc(this.xpos,this.ypos,this.raidus,0,2*Math.PI,false);
+        ctx.arc(this.xpos,this.ypos,this.radius,0,2*Math.PI,false);
         // in raidans when drawing in javascript, false/true = counterclockwise or clockwise. 
         ctx.fill();
         ctx.closePath();
