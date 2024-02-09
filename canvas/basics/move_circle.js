@@ -35,11 +35,25 @@ class Circle{
         ctx.arc(this.xpos,this.ypos,this.radius,0,2*Math.PI,false);
         ctx.stoke();
         ctx.closePath();
-        
+
     }
 }
 
-let circle1 = new Circle(WIDTH/2,HEIGHT/2,20,"blue", -3,2);
+update()
+{
+    this.xpos = this.xpos + this.dx;
+
+    // hit the left wall
+    if(this.xpos-this.radius<=0)
+        this.dx = this.dx*-1;
+
+    // hit the right wall
+    if(this.xpos+this.radius>=WIDTH)
+        this.dx = this.dx*-1
+}
+
+let circle1 = new Circle(WIDTH/2,HEIGHT/2,50,"blue", -3,2);
+circle1.draw(ctx);
 
 //game loop
 
