@@ -7,7 +7,8 @@ cvs.height = HEIGHT;
 
 let ctx = cvs.getContext("2d");
 
-class Circle{
+class Circle
+{
     constructor(x,y,radius,color,dx,dy)
     {
         this.x = x;
@@ -31,12 +32,12 @@ class Circle{
 
         ctx.fillText(this.hit_counter,this.x,this.y);
         ctx.beginPath();
-        ctx.arc(this.xpos,this.ypos,this.rad,0,Math.PI*2,false);
+        ctx.arc(this.x,this.y,this.radius,0,Math.PI*2,false);
         ctx.stoke();
         ctx.closePath();
 
     }
-}
+
 
 update()
 {
@@ -68,7 +69,7 @@ update()
         this.hit_counter++;
     }
 }
-
+}
 let circle1 = new Circle(WIDTH / 2,HEIGHT / 2, 50, "blue", -3, 2);
 circle1.draw(ctx);
 
