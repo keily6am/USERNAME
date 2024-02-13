@@ -1,22 +1,22 @@
-let canvas = documennt.getElementById("canvas");
+let cvs = documennt.getElementById("canvas");
 let HEIGHT = window.innerHeight;
 let WIDTH = window.innerWidth;
 
-canvas.width = WIDTH;
-canvas.height = HEIGHT;
+cvs.width = WIDTH;
+cvs.height = HEIGHT;
 
-let ctx = canvas.getContext("2d");
+let ctx = cvs.getContext("2d");
 
 class Circle{
-    constructor(xpos,ypos,radius,color,dx,dy)
+    constructor(x,y,radius,color,dx,dy)
     {
-        this.xpos = xpos;
-        this.ypos = ypos;
-        this.rad = radius;
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
         this.dx = dx;
         this.dy = dy;
         this.color = color;
-        this.width = 3;
+        this.width = 10;
         this.hit_counter= 0;
 
     }
@@ -29,10 +29,9 @@ class Circle{
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
 
-        ctx.fillText(this.hit_counter,this.xpos,this.ypos);
-
+        ctx.fillText(this.hit_counter,this.x,this.y);
         ctx.beginPath();
-        ctx.arc(this.xpos,this.ypos,this.rad,0,2*Math.PI,false);
+        ctx.arc(this.xpos,this.ypos,this.rad,0,Math.PI*2,false);
         ctx.stoke();
         ctx.closePath();
 
@@ -41,43 +40,43 @@ class Circle{
 
 update()
 {
-    this.xpos+=this.dx;
-    this.ypos+=this.dy;
+    this.x = this.x + this.dx;
+    this.y = this.y + this.dy;
 
     //hit the left wall
-    if(this.xpos<0 +this.rad && this.dx<0)
+    if(this.x + this.radius >= WIDTH)
     {
-        this.dx*=-1;
+        this.dx = this.dx * -1;
         this.hit_counter++;
     }
     //hit the right wall
-    if(this.xpos>WIDTH - this.rad && this.dx>0)
+    if(this.x - this.radius <= 0)
     {
-        this.dx*=-1;
+        this.dx = this.dx * -1;
         this.hit_counter++;
     }
     //hit the bottom wall
-    if(this.ypos>HEIGHT - this.rad && this.dy>0)
+    if(this.y + this.radius >= HEIGHT)
     {
-        this.dy*=-1;
+        this.dy = this.dy * -1;
         this.hit_counter++;
     }
     //hit the top wall
-    if(this.ypos<0 + this.rad && this.dy<0)
+    if(this.y + this.radius <=0)
     {
-        this.dy*= -1;
+        this.dy = this.dy * -1;
         this.hit_counter++;
     }
 }
 
-let circle1 = new Circle(WIDTH/2,HEIGHT/2,20,"blue", -3,2);
+let circle1 = new Circle(WIDTH / 2,HEIGHT / 2, 50, "blue", -3, 2);
 circle1.draw(ctx);
 
 //game loop
 
 function animate(){
     //clear context 
-    ctx.clearReact(0,0,WIDTH,HEIGHT);
+    ctx.clearRect(0,0,WIDTH,HEIGHT);
 
     //update positions
     circle1.update();
