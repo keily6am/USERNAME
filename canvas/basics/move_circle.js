@@ -1,9 +1,9 @@
-let cvs = documennt.getElementById("canvas");
+let canvas = documennt.getElementById("canvas");
 let HEIGHT = window.innerHeight;
 let WIDTH = window.innerWidth;
 
-cvs.width = WIDTH;
-cvs.height = HEIGHT;
+canvas.width = WIDTH;
+canvas.height = HEIGHT;
 
 let ctx = canvas.getContext("2d");
 
@@ -12,11 +12,11 @@ class Circle{
     {
         this.xpos = xpos;
         this.ypos = ypos;
-        this.radius = radius;
+        this.rad = radius;
         this.dx = dx;
         this.dy = dy;
         this.color = color;
-        this.width = 10;
+        this.width = 3;
         this.hit_counter= 0;
 
     }
@@ -32,7 +32,7 @@ class Circle{
         ctx.fillText(this.hit_counter,this.xpos,this.ypos);
 
         ctx.beginPath();
-        ctx.arc(this.xpos,this.ypos,this.radius,0,2*Math.PI,false);
+        ctx.arc(this.xpos,this.ypos,this.rad,0,2*Math.PI,false);
         ctx.stoke();
         ctx.closePath();
 
@@ -41,24 +41,41 @@ class Circle{
 
 update()
 {
-    this.xpos = this.xpos + this.dx;
+    this.xpos+=this.dx;
+    this.ypos+=this.dy;
 
-    // hit the left wall
-    if(this.xpos-this.radius<=0)
-        this.dx = this.dx*-1;
-
-    // hit the right wall
-    if(this.xpos+this.radius>=WIDTH)
-        this.dx = this.dx*-1
+    //hit the left wall
+    if(this.xpos<0 +this.rad && this.dx<0)
+    {
+        this.dx*=-1;
+        this.hit_counter++;
+    }
+    //hit the right wall
+    if(this.xpos>WIDTH - this.rad && this.dx>0)
+    {
+        this.dx*=-1;
+        this.hit_counter++;
+    }
+    //hit the bottom wall
+    if(this.ypos>HEIGHT - this.rad && this.dy>0)
+    {
+        this.dy*=-1;
+        this.hit_counter++;
+    }
+    //hit the top wall
+    if(this.ypos<0 + this.rad && this.dy<0)
+    {
+        this.dy*= -1;
+        this.hit_counter++;
+    }
 }
 
-let circle1 = new Circle(WIDTH/2,HEIGHT/2,50,"blue", -3,2);
+let circle1 = new Circle(WIDTH/2,HEIGHT/2,20,"blue", -3,2);
 circle1.draw(ctx);
 
 //game loop
 
-function animate()
-{
+function animate(){
     //clear context 
     ctx.clearReact(0,0,WIDTH,HEIGHT);
 

@@ -39,6 +39,38 @@ class Circle_Outline
     }
 }
 
+update()
+{
+    this.xpos+=this.dx;
+    this.ypos+=this.dy;
+
+    //hit the left wall
+    if(this.xpos-this.radius<=0)
+    {
+        this.dx = this.dx*-1;
+        this.hit_counter++;
+    }
+    //hit the right wall
+    if(this.xpos+this.radius>=WIDTH)
+    {
+        this.dx = this.dx*-1;
+        this.hit_counter++;
+    }
+    //hit the bottom wall
+    if(this.ypos+this.radius>=HEIGHT)
+    {
+        this.dy = this.dy*-1;
+        this.hit_counter++;
+    }
+    //hit the top wall
+    if(this.ypos+this.radius<=0)
+    {
+        this.dy = this.dy*-1;
+        this.hit_counter++;
+
+    }
+}
+
 
 /*
 letcircle1 = new Circle_Outline(WIDTH/2, HEIGHT/2, 50, 5, "blue", "Hello World!");
