@@ -1,4 +1,4 @@
-let cvs = documennt.getElementById("canvas");
+let cvs = document.getElementById("canvas");
 let HEIGHT = window.innerHeight;
 let WIDTH = window.innerWidth;
 
@@ -88,4 +88,4 @@ function animate(){
 
 }
 
-requestAnimationFrame(animate);
+//requestAnimationFrame(animate);
