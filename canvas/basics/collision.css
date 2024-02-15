@@ -1,0 +1,17 @@
+*{
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    overflow: hidden;
+}
+
+#canvas{
+    background-color: aliceblue;
+}
+
+div{
+    display: none;
+}
