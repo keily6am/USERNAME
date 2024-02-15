@@ -70,6 +70,32 @@ update()
         this.hit_counter++;
     }
 }
+get_x()
+{
+    return this.x;
+}
+
+get_y()
+{
+    return this.y;
+}
+
+get_radius()
+{
+    return this.radius;
+}
+set_color(color)
+{
+    this.color = color;
+}
+}
+
+let circle1 = new Circle(20,20,20,"black",4,2);
+let circle2 = new Circle(WIDTH/2, HEIGHT/2, 300,"black",0,0);
+
+function get_distance(x1,y1,x2,y2)
+{
+    return Math.sqrt(Math.pow(x2-x1,2)+ Math.pow(y2,y1,2));
 }
 //game loop
 function animate(){
