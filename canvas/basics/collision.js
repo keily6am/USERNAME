@@ -107,7 +107,9 @@ function animate(){
     circle2.update();
 
     //check for collisions
-    if(get_distance(circle1.get_x(),circle1.get_y(),circle2.get_x(),circle2.get_y()<= circle1.get_rad()+circle2.get_rad()))
+    if(get_distance(circle1.get_x(),circle1.get_y(),circle2.get_x(),circle2.get_y()
+                    <= circle1.get_radius()+circle2.get_radius()))
+    
     {
         circle1.set_color("red");
         circle2.set_color("red");
@@ -124,3 +126,5 @@ function animate(){
 
     requestAnimationFrame(animate);
 }
+
+animate();
