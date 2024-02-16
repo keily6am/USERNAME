@@ -1,4 +1,4 @@
-l //setup canvas for drawing
+//setup canvas for drawing
 let cvs = document.getElementById("canvas");
 let WIDTH = window.innerWidth;
 let HEIGHT = window.innerHeight;
@@ -31,7 +31,7 @@ class Circle {
         ctx.fillText(this.hit_counter, this.x, this.y);
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-        ctx.stoke();
+        ctx.stroke();
         ctx.closePath();
 
     }
@@ -80,6 +80,8 @@ class Circle {
 
 let circle1 = new Circle(20, 20, 20, "black", 4, 2);
 let circle2 = new Circle(WIDTH / 2, HEIGHT / 2, 300, "black", 0, 0);
+circle1.draw(ctx);
+circle2.draw(ctx);
 
 function get_distance(x1, y1, x2, y2) {
     return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2, y1, 2));
