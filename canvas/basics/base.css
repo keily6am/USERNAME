@@ -1,0 +1,20 @@
+*{
+    background-color: black;
+    margin: 0px;
+}
+
+body{
+    overflow: hidden;
+}
+
+#canvas{
+    background-color: rgb(245, 245, 124);
+    /* center the canvas*/
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+div{
+    display:none;
+}
