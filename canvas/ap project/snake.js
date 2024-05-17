@@ -46,7 +46,6 @@ class Circle {
         this.ypos += this.dy;
 
 
-        // Check for collisions with the walls
         if (this.xpos + this.rad >= WIDTH || this.xpos - this.rad <= 0) {
             this.dx = -this.dx;
         }
@@ -131,8 +130,6 @@ class Square {
         this.xpos += this.dx;
         this.ypos += this.dy;
 
-
-        // Check for collisions with the walls
         if (this.xpos + this.length >= WIDTH || this.xpos - this.length <= 0) {
             this.dx = -this.dx;
         }
@@ -177,11 +174,6 @@ class Square {
 }
 
 
-
-
-
-
-//distance formula
 function get_distance(x1, y1, x2, y2) 
 {
     return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
@@ -242,11 +234,8 @@ function animate()
     {
         circles[i].update();
     }
-
-
-    // drawing squares
     square1.draw(ctx);
-    // check for collisions with other circles
+
     for (let j = circles.length - 1; j >= 0; j--) 
     {
         let distance = get_distance(square1.get_x(), square1.get_y(), circles[j].get_x(), circles[j].get_y());
@@ -343,16 +332,12 @@ function handle_keyup(event)
     }
 }
 
-
 function updateCountdown() 
 {
     const minutes = Math.floor(time / 60);
     let seconds = time % 60;
     countdownEl.innerHTML = `${minutes}:${seconds}`;
     time--;
-
-
-
 
     if (time < 0) 
     {
